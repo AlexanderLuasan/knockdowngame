@@ -4,9 +4,12 @@ public class playermovment : MonoBehaviour
 {
     public Rigidbody rb;
     public float speed = 1000f;
+    private string keyName = "g"
     //for pysics
     void FixedUpdate()
     {
-        rb.AddForce(0, 0, speed * Time.deltaTime);
+        if (Input.GetButtonDown(keyName)) {
+            rb.AddForce(0, 0, speed * Time.deltaTime)
+                }
     }
 }
